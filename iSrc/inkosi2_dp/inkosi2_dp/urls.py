@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from inkosi2_dpa.views import .
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,5 @@ urlpatterns = [
     path('student/activity/detail', student_activity_detail_view),
     path('dalibi/', student_dashboard_view),
     path('inkosi/', inkosi_view),
-    path('', index_view, name = 'index'),
+    path('', index_view, name='index'),
 ]
