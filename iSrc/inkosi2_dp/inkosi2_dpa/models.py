@@ -21,6 +21,7 @@ class Course(models.Model):
     course_ownerID = models.ForeignKey(IUser, on_delete=models.CASCADE)
     course_created_date = models.DateField(auto_now=True) 
 
+
 @deconstructible
 class Course_Assignment(models.Model):
     related_courseID = models.ForeignKey(Course, on_delete=models.CASCADE)   
@@ -33,11 +34,11 @@ class Course_Assignment(models.Model):
     assignment_created_date = models.DateField(auto_now=True)
 
 
-@deconstructible
+# @deconstructible
 class Student_Course_Assignment(models.Model):
     student_course_assignmentID = models.IntegerField(auto_created=True, unique=True)
     related_studentID = models.ForeignKey(IUser, on_delete=models.CASCADE)
-    related_courseID = models.ForeignKey(Course)
+    related_courseID = models.ForeignKey(Course, on_delete=models.CASCADE)
     related_assignmentID = models.ForeignKey(Course_Assignment, on_delete=models.CASCADE)
     start_date = models.DateField()
     complete_date = models.DateField(blank=True)
@@ -55,7 +56,7 @@ class Student_Activity(models.Model):
     student_activityID = models.IntegerField(auto_created=True, unique=True)
     related_studentID = models.ForeignKey(IUser, on_delete=models.CASCADE)
     related_student_course_assignmentID = models.ForeignKey(Student_Course_Assignment, on_delete=models.CASCADE)
-    activity_type = models.ForeignKey(Student_Activity_Type)
+    activity_type = models.ForeignKey(Student_Activity_Type, on_delete=models.CASCADE)
     activity_details = models.CharField(max_length=10000, blank=False)
     created_date = models.DateField(auto_now=True)
 

@@ -1,0 +1,474 @@
+[
+    {
+        "model": "inkosi2_dpa.IUser",
+        "pk": 1,
+        "fields":{
+            "user_name": "Master Foo", 
+            "user_email": "masterfoo@fooism.foo",
+            "user_cell": 4048675309,
+            "userID": 1,
+            "user_pic": "pic.jpg",
+            "user_created_date": "2009-09-09"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.IUser",
+        "pk": 2,
+        "fields":{
+            "user_name": "Master Bar", 
+            "user_email": "mbarbarian@barism.atthegate",
+            "user_cell": 4048374672,
+            "userID": 2,
+            "user_pic": "pic.jpg",
+            "user_created_date": "2009-09-09"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.IUser",
+        "pk": 3,
+        "fields":{
+            "user_name": "Gru", 
+            "user_email": "grusie@badguy.bad",
+            "user_cell": 6783873902,
+            "userID": 3,
+            "user_pic": "pic.jpg",
+            "user_created_date": "2009-09-09"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.IUser",
+        "pk": 4,
+        "fields":{
+            "user_name": "Mighty Mouse", 
+            "user_email": "mousemuscle@ihatedisney.net",
+            "user_cell": 3902783782,
+            "userID": 4,
+            "user_pic": "pic.jpg",
+            "user_created_date": "2009-09-09"
+        }
+    },
+
+
+
+
+
+    {
+        "model": "inkosi2_dpa.Course",
+        "pk": 1,
+        "fields":{
+            "courseID": 1,
+            "course_title": "Great Course Number 1",
+            "course_description": "Greate Course Description for Course Number 1",
+            "course_ownerID": 1,
+            "course_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course",
+        "pk": 2,
+        "fields":{
+            "courseID": 2,
+            "course_title": "Great Course Number 2",
+            "course_description": "Greate Course Description for Course Number 2",
+            "course_ownerID": 2,
+            "course_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course",
+        "pk": 3,
+        "fields":{
+            "courseID": 3,
+            "course_title": "Great Course Number 3",
+            "course_description": "Greate Course Description for Course Number 3",
+            "course_ownerID": 1,
+            "course_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course",
+        "pk": 4,
+        "fields":{
+            "courseID": 4,
+            "course_title": "Great Course Number 4",
+            "course_description": "Greate Course Description for Course Number 4",
+            "course_ownerID": 2,
+            "course_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course",
+        "pk": 5,
+        "fields":{
+            "courseID": 5,
+            "course_title": "Great Course Number 5",
+            "course_description": "Greate Course Description for Course Number 5",
+            "course_ownerID": 1,
+            "course_created_date": "2018-10-12"
+        }
+    },
+
+
+
+
+
+    {
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 1,
+        "fields":{
+            "related_courseID": 1,    
+            "course_assignmentID": 1,   
+            "assignment_name": "Great Course 1 Assignment number 1!",
+            "assignment_number": 1,
+            "assignment_description": "Great Course 1 Assignment number 1 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 1,
+            "assignment_created_date": "2018-10-12"
+        }
+    },{
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 2,
+        "fields":{
+            "related_courseID": 1,    
+            "course_assignmentID": 2,   
+            "assignment_name": "Great Course 1 Assignment number 2!",
+            "assignment_number": 1,
+            "assignment_description": "Great Course 1 Assignment number 2 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 1,
+            "assignment_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 3,
+        "fields":{
+            "related_courseID": 1,    
+            "course_assignmentID": 3,   
+            "assignment_name": "Great Course 1 Assignment number 3!",
+            "assignment_number": 3,
+            "assignment_description": "Great Course 1 Assignment number 3 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 1,
+            "assignment_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 4,
+        "fields":{
+            "related_courseID": 2,    
+            "course_assignmentID": 4,   
+            "assignment_name": "Great Course 2 Assignment number 1!",
+            "assignment_number": 1,
+            "assignment_description": "Great Course 2 Assignment number 1 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 2,
+            "assignment_created_date": "2018-10-12"
+        }
+    },{
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 5,
+        "fields":{
+            "related_courseID": 2,    
+            "course_assignmentID": 5,   
+            "assignment_name": "Great Course 2 Assignment number 2!",
+            "assignment_number": 1,
+            "assignment_description": "Great Course 2 Assignment number 2 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 2,
+            "assignment_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 6,
+        "fields":{
+            "related_courseID": 2,    
+            "course_assignmentID": 6,   
+            "assignment_name": "Great Course 2 Assignment number 3!",
+            "assignment_number": 3,
+            "assignment_description": "Great Course 2 Assignment number 3 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 2,
+            "assignment_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 7,
+        "fields":{
+            "related_courseID": 3,    
+            "course_assignmentID": 7,   
+            "assignment_name": "Great Course 3 Assignment number 1!",
+            "assignment_number": 1,
+            "assignment_description": "Great Course 3 Assignment number 1 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 2,
+            "assignment_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 8,
+        "fields":{
+            "related_courseID": 3,    
+            "course_assignmentID": 8,   
+            "assignment_name": "Great Course 3 Assignment number 2!",
+            "assignment_number": 1,
+            "assignment_description": "Great Course 3 Assignment number 2 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 2,
+            "assignment_created_date": "2018-10-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Course_Assignment",
+        "pk": 9,
+        "fields":{
+            "related_courseID": 3,    
+            "course_assignmentID": 9,   
+            "assignment_name": "Great Course 3 Assignment number 3!",
+            "assignment_number": 3,
+            "assignment_description": "Great Course 3 Assignment number 3 awesome description!",
+            "assignment_due_date": "2018-10-15",
+            "assignment_inkosi": 2,
+            "assignment_created_date": "2018-10-12"
+        }
+    },
+
+
+
+
+
+    {
+        "model": "inkosi2_dpa.Student_Course_Assignment",
+        "pk": 1,
+        "fields":{
+            "student_course_assignmentID": 1,
+            "related_studentID": 3,
+            "related_courseID": 1, 
+            "related_assignmentID": 1,
+            "start_date": "2018-11-10",
+            "complete_date": "2018-11-11",
+            "isStarted": "True",
+            "stu_course_asgn_created_date": "2018-11-10"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Course_Assignment",
+        "pk": 2,
+        "fields":{
+            "student_course_assignmentID": 2,
+            "related_studentID": 3,
+            "related_courseID": 1, 
+            "related_assignmentID": 2,
+            "start_date": "2018-11-13",
+            "complete_date": "2018-11-14",
+            "isStarted": "True",
+            "stu_course_asgn_created_date": "2018-11-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Course_Assignment",
+        "pk": 3,
+        "fields":{
+            "student_course_assignmentID": 3,
+            "related_studentID": 3,
+            "related_courseID": 1, 
+            "related_assignmentID": 3,
+            "start_date": "2018-11-10",
+            "complete_date": "2018-11-11",
+            "isStarted": "True",
+            "stu_course_asgn_created_date": "2018-11-10"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Course_Assignment",
+        "pk": 4,
+        "fields":{
+            "student_course_assignmentID": 4,
+            "related_studentID": 4,
+            "related_courseID": 3, 
+            "related_assignmentID": 1,
+            "start_date": "2018-11-13",
+            "complete_date": "2018-11-14",
+            "isStarted": "True",
+            "stu_course_asgn_created_date": "2018-11-12"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Course_Assignment",
+        "pk": 5,
+        "fields":{
+            "student_course_assignmentID": 5,
+            "related_studentID": 4,
+            "related_courseID": 3, 
+            "related_assignmentID": 2,
+            "start_date": "2018-11-16",
+            "complete_date": "2018-11-17",
+            "isStarted": "True",
+            "stu_course_asgn_created_date": "2018-11-15"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Course_Assignment",
+        "pk": 6,
+        "fields":{
+            "student_course_assignmentID": 6,
+            "related_studentID": 4,
+            "related_courseID": 3, 
+            "related_assignmentID": 3,
+            "start_date": "2018-11-19",
+            "complete_date": "2018-11-20",
+            "isStarted": "True",
+            "stu_course_asgn_created_date": "2018-11-18"
+        }
+    },
+
+
+
+
+
+    {
+        "model": "inkosi2_dpa.Student_Activity_Type",
+        "pk": 1,
+        "fields":{
+            "student_activity_typeID": 1,
+            "student_activity_type": "Start Assignment"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity_Type",
+        "pk": 2,
+        "fields":{
+            "student_activity_typeID": 2,
+            "student_activity_type": "Finish Assignment"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity_Type",
+        "pk": 3,
+        "fields":{
+            "student_activity_typeID": 3,
+            "student_activity_type": "Student Assignment Question"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity_Type",
+        "pk": 4,
+        "fields":{
+            "student_activity_typeID": 4,
+            "student_activity_type": "Instructor Assignment Answer"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity_Type",
+        "pk": 5,
+        "fields":{
+            "student_activity_typeID": 5,
+            "student_activity_type": "File Upload"
+        }
+    },
+
+
+
+
+
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 1,
+        "fields":{
+            "student_activityID": 1,
+            "related_studentID": 3,
+            "related_student_course_assignmentID": 1,
+            "activity_type": 1,
+            "activity_details": "Cool activity number 1 for assignment 1 of course 1",
+            "created_date": "2018-11-18"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 2,
+        "fields":{
+            "student_activityID": 2,
+            "related_studentID": 3,
+            "related_student_course_assignmentID": 1,
+            "activity_type": 2,
+            "activity_details": "Cool activity number 2 for assignment 1 of course 1",
+            "created_date": "2018-11-18"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 3,
+        "fields":{
+            "student_activityID": 3,
+            "related_studentID": 3,
+            "related_student_course_assignmentID": 1,
+            "activity_type": 3,
+            "activity_details": "Cool activity number 3 for assignment 1 of course 1",
+            "created_date": "2018-11-18"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 4,
+        "fields":{
+            "student_activityID": 4,
+            "related_studentID": 4,
+            "related_student_course_assignmentID": 4,
+            "activity_type": 1,
+            "activity_details": "Cool activity number 1 for assignment 1 of course 3",
+            "created_date": "2018-11-18"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 5,
+        "fields":{
+            "student_activityID": 5,
+            "related_studentID": 4,
+            "related_student_course_assignmentID": 4,
+            "activity_type": 2,
+            "activity_details": "Cool activity number 2 for assignment 1 of course 3",
+            "created_date": "2018-11-18"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 6,
+        "fields":{
+            "student_activityID": 6,
+            "related_studentID": 4,
+            "related_student_course_assignmentID": 4,
+            "activity_type": 3,
+            "activity_details": "Cool activity number 3 for assignment 1 of course 3",
+            "created_date": "2018-11-18"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 7,
+        "fields":{
+            "student_activityID": 7,
+            "related_studentID": 4,
+            "related_student_course_assignmentID": 4,
+            "activity_type": 4,
+            "activity_details": "Cool communication activity from the instructor regarding assignment 1 of course 3",
+            "created_date": "2018-11-18"
+        }
+    },
+    {
+        "model": "inkosi2_dpa.Student_Activity",
+        "pk": 8,
+        "fields":{
+            "student_activityID": 8,
+            "related_studentID": 3,
+            "related_student_course_assignmentID": 1,
+            "activity_type": 5,
+            "activity_details": "Cool communication activity from the instructor regarding assignment 1 of course 1",
+            "created_date": "2018-11-18"
+        }
+    }
+]
