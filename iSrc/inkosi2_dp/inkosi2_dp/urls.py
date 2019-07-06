@@ -18,4 +18,14 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('courses/', course_view),
+    path('courses/detail/', course_detail_view),
+    path('course/create/', create_course_view),
+    path('student_list/', student_list_view),
+    path('student/detail', student_detail_view),
+    path('student/activity', student_activity_view),
+    path('student/activity/detail', student_activity_detail_view),
+    path('dalibi/', student_dashboard_view),
+    path('inkosi/', inkosi_view),
+    path('', index_view, name = 'index'),
 ]
