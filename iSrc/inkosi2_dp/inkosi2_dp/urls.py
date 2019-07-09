@@ -15,17 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from inkosi2_dpa.views import course_detail_view, course_view, create_course_view, student_list_view, student_detail_view, student_dashboard_view, student_activity_view, student_activity_detail_view, index_view, inkosi_view
+from inkosi2_dpa.views import course_detail_view, course_assignment_view, create_assignment_view, course_view, create_course_view, student_list_view, student_detail_view, student_dashboard_view, student_activity_view, student_activity_detail_view, index_view, inkosi_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('courses/', course_view),
-    path('courses/detail/', course_detail_view),
+    path('course/detail/<int:id>/', course_detail_view),
+    path('course/detail/assignments', course_assignment_view),
     path('course/create/', create_course_view),
+    path('course/create/assignment', create_assignment_view),
     path('student_list/', student_list_view),
-    path('student/detail', student_detail_view),
+    path('student/detail/<int:id>/', student_detail_view),
     path('student/activity', student_activity_view),
-    path('student/activity/detail', student_activity_detail_view),
+    path('student/activity/detail/<int:id>/', student_activity_detail_view),
     path('dalibi/', student_dashboard_view),
     path('inkosi/', inkosi_view),
     path('', index_view, name='index'),

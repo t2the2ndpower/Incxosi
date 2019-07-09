@@ -21,6 +21,9 @@ class Course(models.Model):
     course_ownerID = models.ForeignKey(IUser, on_delete=models.CASCADE)
     course_created_date = models.DateField(auto_now=True) 
 
+    def get_absolute_url(self):
+        return f"/course/detail/{self.id}/"
+
 
 @deconstructible
 class Course_Assignment(models.Model):
@@ -33,6 +36,9 @@ class Course_Assignment(models.Model):
     assignment_inkosi = models.ForeignKey(IUser, on_delete=models.CASCADE)
     assignment_created_date = models.DateField(auto_now=True)
 
+    # def get_absolute_url(self):
+    #     return f"/courses/details{self.id}/"
+
 
 # @deconstructible
 class Student_Course_Assignment(models.Model):
@@ -44,6 +50,9 @@ class Student_Course_Assignment(models.Model):
     complete_date = models.DateField(blank=True)
     isStarted = models.BooleanField(default=0)
     stu_course_asgn_created_date = models.DateField(auto_now=True)
+
+    def get_absolute_url(self):
+        return f"/inkosi2_dpa/{self.id}/"
 
 
 class Student_Activity_Type(models.Model):
@@ -59,5 +68,8 @@ class Student_Activity(models.Model):
     activity_type = models.ForeignKey(Student_Activity_Type, on_delete=models.CASCADE)
     activity_details = models.CharField(max_length=10000, blank=False)
     created_date = models.DateField(auto_now=True)
+
+    def get_absolute_url(self):
+        return f"/inkosi2_dpa/{self.id}/"
 
 
