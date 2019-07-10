@@ -53,6 +53,7 @@ def create_course_view(request, *args, **kwargs):
     context = {
         "course_title": "New Course Created!",
         "course_description": "New Course Description Created!",
+        "courseID": "12",
         "form": form,
         }
     return render(request, "create_course.html", context)

@@ -15,6 +15,12 @@ class course_form(forms.ModelForm):
             'placeholder': 'Course Description...'
         }
     ))
+    courseID = forms.IntegerField(widget=forms.TextInput(
+        attrs={
+            'class': 'form-control',
+            'placeholder': 'enter id...'
+        }
+    ))
 
     class Meta:
         model = Course
