@@ -10,7 +10,7 @@ class IUser(models.Model):
     user_cell = models.IntegerField(blank=False)
     userID = models.IntegerField(auto_created=True, unique=True)
     user_pic = models.URLField()
-    user_created_date = models.DateField(auto_now=True)
+    user_created_date = models.DateField(auto_now_add=True)
 
 
 @deconstructible
@@ -19,7 +19,7 @@ class Course(models.Model):
     course_title = models.CharField(max_length=80, blank=False)
     course_description = models.CharField(max_length=10000, blank=False)
     course_ownerID = models.ForeignKey(IUser, on_delete=models.CASCADE)
-    course_created_date = models.DateField(auto_now=True) 
+    course_created_date = models.DateField(auto_now_add=True) 
 
     def get_absolute_url(self):
         return f"/course/detail/{self.id}/"
@@ -34,7 +34,7 @@ class Course_Assignment(models.Model):
     assignment_description = models.CharField(max_length=10000, blank=False)
     assignment_due_date = models.DateField()
     assignment_inkosi = models.ForeignKey(IUser, on_delete=models.CASCADE)
-    assignment_created_date = models.DateField(auto_now=True)
+    assignment_created_date = models.DateField(auto_now_add=True)
 
     # def get_absolute_url(self):
     #     return f"/courses/details{self.id}/"
@@ -49,7 +49,7 @@ class Student_Course_Assignment(models.Model):
     start_date = models.DateField()
     complete_date = models.DateField(blank=True)
     isStarted = models.BooleanField(default=0)
-    stu_course_asgn_created_date = models.DateField(auto_now=True)
+    stu_course_asgn_created_date = models.DateField(auto_now_add=True)
 
     def get_absolute_url(self):
         return f"/inkosi2_dpa/{self.id}/"
@@ -67,7 +67,7 @@ class Student_Activity(models.Model):
     related_student_course_assignmentID = models.ForeignKey(Student_Course_Assignment, on_delete=models.CASCADE)
     activity_type = models.ForeignKey(Student_Activity_Type, on_delete=models.CASCADE)
     activity_details = models.CharField(max_length=10000, blank=False)
-    created_date = models.DateField(auto_now=True)
+    created_date = models.DateField(auto_now_add=True)
 
     def get_absolute_url(self):
         return f"/inkosi2_dpa/{self.id}/"
