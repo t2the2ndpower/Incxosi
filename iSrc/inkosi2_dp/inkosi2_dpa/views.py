@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Api imports
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from inkosi2_dpa.serializers import UserSerializer, GroupSerializer
+from inkosi2_dpa.serializers import UserSerializer, GroupSerializer, CoursesSerializer, CourseAssignmentSerializer
 # model imports
 from .models import Course, Course_Assignment
 # from django.http import HttpResponse
@@ -125,3 +125,6 @@ class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = GroupSerializer
 
 
+class CourseViewSet(viewsets.ModelViewSet):
+    queryset = Course.objects.all()
+    serializer_class = CoursesSerializer
