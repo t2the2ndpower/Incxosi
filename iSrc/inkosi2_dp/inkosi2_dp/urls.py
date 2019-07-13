@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
 # Api imports
-from django.urls import include, path
 from rest_framework import routers
 from inkosi2_dpa import views
+
 # Template imports
 from django.views.generic.base import TemplateView
+
 # Views import
 from inkosi2_dpa.views import course_detail_view, course_assignment_view, create_assignment_view, course_view, create_course_view, student_list_view, student_detail_view, student_dashboard_view, student_activity_view, student_activity_detail_view, index_view, inkosi_view
 
