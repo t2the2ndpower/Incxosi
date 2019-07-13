@@ -128,3 +128,8 @@ class GroupViewSet(viewsets.ModelViewSet):
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CoursesSerializer
+
+
+class CourseAssignmentViewSet(viewsets.ModelViewSet):
+    queryset = Course_Assignment.objects.all()
+    serializer_class = CourseAssignmentSerializer

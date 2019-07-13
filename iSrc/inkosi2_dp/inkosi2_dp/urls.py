@@ -30,6 +30,7 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'course', views.CourseViewSet)
+router.register(r'course_assignments', views.CourseAssignmentViewSet)
 
 
 urlpatterns = [

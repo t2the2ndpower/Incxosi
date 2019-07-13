@@ -26,11 +26,27 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class CoursesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Course
-        fields = ('courseID', 'url', 'course_title', 'course_description', 'course_ownerID', 'course_created_date')
+        fields = (
+            'courseID',
+            'url',
+            'course_title',
+            'course_description',
+            'course_ownerID',
+            'course_created_date'
+            )
 
 
 class CourseAssignmentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Course_Assignment
-        fields = ('related_courseID', 'course_assignmentID','assignment_name', 'assignment_number', 'assignment_description', 'assignment_due_date', 'assignment_created_date', 'assignment_created_by')
-
+        fields = (
+            'course_assignmentID',
+            'url',
+            'related_courseID',
+            'assignment_name',
+            'assignment_number',
+            'assignment_description',
+            'assignment_due_date',
+            'assignment_created_date',
+            'assignment_created_by'
+        )
