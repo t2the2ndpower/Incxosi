@@ -22,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(w@r+a(2p+!8c%l#iu-dcsp0cq!ad1_+dbi)xh-(+o7$6%z5jd'
+SECRET_KEY = os.environ.get=('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['incxosi.herokuapp.com']
 
 # SECURITY!!!
 CORS_REPLACE_HTTPS_REFERER = True
@@ -95,7 +95,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -123,7 +126,13 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'idsg3.test@gmail.com'
-EMAIL_HOST_PASSWORD = '1234qwerASDF!'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+DEFAULT_FROM_EMAIL= 'All of us at IDSg3 <idsg3.test@gmail.com>'
+
+ADMINS = (
+    ('idsg3', 'idsg3.test@gmail.com'),
+)
+MANAGERS = ADMINS
 
 
 # Internationalization
