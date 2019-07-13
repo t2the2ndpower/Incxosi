@@ -15,8 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+# Api imports
+from django.urls import include, path
+from rest_framework import routers
+from inkosi2_dpa import views
+# Template imports
 from django.views.generic.base import TemplateView
+# Views import
 from inkosi2_dpa.views import course_detail_view, course_assignment_view, create_assignment_view, course_view, create_course_view, student_list_view, student_detail_view, student_dashboard_view, student_activity_view, student_activity_detail_view, index_view, inkosi_view
+
+
+# Variables
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,4 +48,6 @@ urlpatterns = [
     path('dalibi/', student_dashboard_view),
     path('inkosi/', inkosi_view),
     path('', index_view, name='index'),
+    path('router/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
