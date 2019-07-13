@@ -18,7 +18,7 @@ class Course(models.Model):
     courseID = models.IntegerField(auto_created=True, unique=True)
     course_title = models.CharField(max_length=80, blank=False)
     course_description = models.CharField(max_length=10000, blank=False)
-    course_ownerID = models.ForeignKey(IUser, on_delete=models.CASCADE)
+    course_ownerID = models.ForeignKey('auth.User', related_name='Course', on_delete=models.CASCADE)
     course_created_date = models.DateField(auto_now_add=True) 
 
     def get_absolute_url(self):
@@ -33,8 +33,9 @@ class Course_Assignment(models.Model):
     assignment_number = models.IntegerField(auto_created=True)
     assignment_description = models.CharField(max_length=10000, blank=False)
     assignment_due_date = models.DateField()
-    assignment_inkosi = models.ForeignKey(IUser, on_delete=models.CASCADE)
+    # assignment_inkosi = models.ForeignKey(IUser, on_delete=models.CASCADE)
     assignment_created_date = models.DateField(auto_now_add=True)
+    assignment_created_by = models.ForeignKey('auth.User', related_name='Couse_Assignment', on_delete=models.CASCADE)
 
     # def get_absolute_url(self):
     #     return f"/courses/details{self.id}/"

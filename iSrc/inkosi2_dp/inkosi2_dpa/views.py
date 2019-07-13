@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render
+# Api imports
+from django.contrib.auth.models import User, Group
+from rest_framework import viewsets
+from inkosi2_dpa.serializers import UserSerializer, GroupSerializer
+# model imports
 from .models import Course, Course_Assignment
 # from django.http import HttpResponse
 from .forms import course_form, assignment_form
@@ -102,3 +107,21 @@ def student_dashboard_view(request, *args, **kwargs):
 def inkosi_view(request, *args, **kwargs):
     # return HttpResponse("<h1>Hello World</h1>") 
     return render(request, "inkosi.html", {})
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+
+
+class GroupViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
+
+
