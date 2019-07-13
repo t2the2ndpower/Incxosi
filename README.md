@@ -9,10 +9,10 @@ Have you ever wanted to help a friend with something that came natural to you bu
 
 Have you gained life experience, overcome an obstacle, or received training and would like to pass this on?
 
-Inkosi allows those with knowledge to share it, in a one on one, incremental, measures based manner with accountability baked in.
+Incxosi allows those with knowledge to share it, in a one on one, incremental, measures based manner with accountability baked in.
 
 ## Basic Functionality ##
 
-- As a Master, Inkosi allows the Master user to create mini courses that are broken down into daily activities that span over 3, 6, or 12 weeks.
-- These dailiy activities are automatically delivered to the apprentice at preset times that the Inkosi set.
-- As the apprentice completes their daily activity, they respond via text or email.  The response is tracked in the system and responses are then aggregated and delivered to the Inkosi's dashboard for overall apprentice engagement accountability.
+- As a Master, Incxosi allows the Master user to create mini courses that are broken down into daily activities that span over 3, 6, or 12 weeks.
+- These dailiy activities are automatically delivered to the apprentice at preset times that the Incxosi set.
+- As the apprentice completes their daily activity, they respond via text or email.  The response is tracked in the system and responses are then aggregated and delivered to the Incxosi's dashboard for overall apprentice engagement accountability.
